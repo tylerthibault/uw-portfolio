@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&family=Staatliches&display=swap');
 * {
     margin: 0;
     padding: 0;
@@ -10,6 +11,23 @@
     --color3: #e9c46a;
     --color4: #f4a261;
     --color5: #e76f51;
+
+    --font1: 'Roboto Slab', serif;;
+    --font2: 'Staatliches', cursive;;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: var(--font2);
+    color: black;
+}
+
+p{
+    font-family: var(--font1);
+    color: black;
+}
+
+button, .button, .btn {
+    color: black;
 }
 
 .title {
@@ -66,8 +84,11 @@
 }
 
 .card {
-    border: 2px solid black;
-    min-height: 100px;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    padding: 1em;
+    background: white;
 }
 
 .about-me{

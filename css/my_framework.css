@@ -42,8 +42,14 @@
 .my-justify-center {
     justify-content: center;
 }
-.my-center {
+.my-align-center {
     align-items: center;
+}
+.my-align-end {
+    align-items: flex-end;
+}
+.my-align-start {
+    align-items: flex-start;
 }
 
 
@@ -305,6 +311,20 @@ button {
 .button:hover,
 button:hover {
     background: var(--color5);
+}
+
+.disabled {
+    background: lightgray;
+    color: gray;
+    border: 1px solid gray;
+    pointer-events: none;
+}
+
+.disabled:hover{
+    background: lightgray;
+    color: gray;
+    border: 1px solid gray;
+    pointer-events: none;
 }
 
 /* border */
