@@ -63,11 +63,6 @@ button, .button, .btn {
     backdrop-filter: blur(1px);
 }
 
-/* .nav-img:hover{
-    height: 170px;
-    width: 190px;
-} */
-
 .navbar {
     margin: 1em;
     align-items: center;
@@ -85,19 +80,18 @@ button, .button, .btn {
 
 .card {
     display: flex;
-    flex-flow: column wrap;
+    flex-flow: column nowrap;
     align-items: center;
     padding: 1em;
-    background: white;
+    overflow: auto;
+}
+
+.card::-webkit-scrollbar{
+    display: none;
 }
 
 .about-me{
-    overflow: none;
     width: 70%;
-}
-
-.about-me::-webkit-scrollbar{
-    display: none;
 }
 
 .about-me-img {

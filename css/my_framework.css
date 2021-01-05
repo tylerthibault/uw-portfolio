@@ -278,6 +278,10 @@
     background: var(--color5);
 }
 
+.my-color-white{
+    background: white;
+}
+
 /* colors - text */
 .my-txt-color-1{
     color: var(--color1);
