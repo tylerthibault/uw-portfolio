@@ -36,6 +36,11 @@ button, .button, .btn {
     align-items: center;
 }
 
+.small-title{
+    position: sticky;
+    top: 0;
+}
+
 .bgImg-1 {
     position: absolute;
     top: 0;
@@ -49,8 +54,11 @@ button, .button, .btn {
     z-index: 0;
 }
 
+.menuBtn {
+    color: white;
+}
+
 .navMenu {
-    position: relative;
     width: 100%;
     z-index: 2;
 }
@@ -84,14 +92,11 @@ button, .button, .btn {
     align-items: center;
     padding: 1em;
     overflow: auto;
+    border: 2px solid black;
 }
 
 .card::-webkit-scrollbar{
     display: none;
-}
-
-.about-me{
-    width: 70%;
 }
 
 .about-me-img {
@@ -106,9 +111,59 @@ button, .button, .btn {
     background-repeat: no-repeat;
 }
 
+.project-box {
+    width: 90%;
+}
+
+.menu-container {
+    position: relative;
+}
+
+.side-menu-container{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9;
+}
+
+.side-menu{
+    position: absolute;
+    top: 0px;
+    left: -200px;
+    padding: 10px;
+    height: 100vh;
+    width: 40vw;
+    z-index: 9;
+}
+
+.side-menu-open {
+    left: 0px;
+    animation-name: side-menu-open;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes side-menu-open {
+    0% {left: -200px}
+    100% {left: 0px}
+}
+
+.side-menu-close {
+    left: 0px;
+    animation-name: side-menu-close;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes side-menu-close {
+    0% {left: 0px}
+    100% {left: -200px}
+}
+
 .expand-on-hover{
     transition: all .2s ease-in-out;
 }
 .expand-on-hover:hover{
     transform: scale(1.1);
 }
+

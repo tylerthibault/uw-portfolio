@@ -1,7 +1,34 @@
 var isDarkMode = true;
 $(document).ready(function () {
+    // title being sticky on small screens
+    var screenSize = window.screen.width;
+    if (screenSize < 430) {
+        $(".title").addClass("small-title");
+    }
+
+    // Light and Dark mode
     $(".colorMode").on("click", (e) => {
         setColors();
+    });
+
+    // small screen side menu
+    $(".menuBtn").on("click", (e) => {
+        // check navMenu display status
+        var sideMenu = $(".side-menu");
+        console.log($(sideMenu).data("status"));
+        if (sideMenu.data("status") === "close") {
+            $(sideMenu).addClass("side-menu-open");
+            $(sideMenu).removeClass("side-menu-close");
+            $(sideMenu).css("display", "block");
+            $(sideMenu).data("status", "open");
+        } else {
+            $(sideMenu).addClass("side-menu-close");
+            $(sideMenu).removeClass("side-menu-open");
+            $(sideMenu).data("status", "close");
+            setTimeout(() => {
+                $(sideMenu).css("display", "none");
+            }, 2000);
+        }
     });
 });
 
