@@ -60,9 +60,26 @@
     width: 100%;
 }
 
+.my-width-50{
+    width: 50%;
+}
+
+.my-width-25{
+    width: 25%;
+}
+
 .my-full-height{
     height: 100%;
 }
+
+.my-height-50{
+    height: 50%;
+}
+
+.my-height-25{
+    height: 25%;
+}
+
 
 /*  Sizing */
 .my-h1{

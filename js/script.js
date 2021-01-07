@@ -1,4 +1,3 @@
-var isDarkMode = true;
 $(document).ready(function () {
     // title being sticky on small screens
     var screenSize = window.screen.width;
@@ -7,8 +6,13 @@ $(document).ready(function () {
     }
 
     // Light and Dark mode
+    let color = getColor();
+    setColors(color);
+
     $(".colorMode").on("click", (e) => {
-        setColors();
+        console.log("the color is: " + color);
+        color = switchColor(color);
+        setColors(color);
     });
 
     // small screen side menu
@@ -31,13 +35,36 @@ $(document).ready(function () {
         }
     });
 });
+function getColor() {
+    try {
+        var colorMode = localStorage.getItem("colorMode");
+        console.log("try");
+    } catch {
+        var colorMode = "dark";
+        console.log("catch");
+    }
+    console.log("color mode is: " + colorMode);
+    return colorMode;
+}
 
-function setColors() {
-    console.log("setColor");
+function switchColor(color) {
+    console.log("switch color: " + color);
+    if (color === "dark") {
+        color = "light";
+        localStorage.setItem("colorMode", "light");
+    } else {
+        color = "dark";
+        localStorage.setItem("colorMode", "dark");
+    }
+    console.log("returning the color " + color);
+    return color;
+}
+
+function setColors(color) {
+    console.log("set color: " + color);
     var r = document.querySelector(":root");
-    var rs = getComputedStyle(r);
-    if (isDarkMode) {
-        isDarkMode = false;
+    if (color === "dark") {
+        console.log("change to light mode");
         $(".colorMode").text("Dark Mode");
         r.style.setProperty("--color1", "#d8f3dc");
         r.style.setProperty("--color2", "#b7e4c7");
@@ -45,7 +72,7 @@ function setColors() {
         r.style.setProperty("--color4", "#74c69d");
         r.style.setProperty("--color5", "#52b788");
     } else {
-        isDarkMode = true;
+        console.log("change to dark mode");
         $(".colorMode").text("Light Mode");
         r.style.setProperty("--color1", "#264653");
         r.style.setProperty("--color2", "#2a9d8f");
