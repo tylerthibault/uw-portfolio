@@ -30,6 +30,26 @@ button, .button, .btn {
     color: black;
 }
 
+.main-content{
+    display: none;
+}
+
+.onTop {
+    z-index: 2;
+}
+
+.name-area {
+    text-align: center;
+    width: 20em;
+    /* height: 155px; */
+    border: 2px solid var(--color3);
+    border-radius: 10px;
+}
+
+.splashScreen {
+    height: 100vh;
+}
+
 .title {
     position: relative;
     display: flex;

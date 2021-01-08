@@ -1,4 +1,13 @@
 $(document).ready(function () {
+    // type it out
+    $(".name-area").on("click", function(){
+        $('.splashScreen').css('display', 'none')
+        $('.main-content').css('display', 'block')
+    })
+
+    typeItOut()
+
+
     // title being sticky on small screens
     var screenSize = window.screen.width;
     if (screenSize < 430) {
@@ -35,6 +44,9 @@ $(document).ready(function () {
         }
     });
 });
+
+// functions
+
 function getColor() {
     try {
         var colorMode = localStorage.getItem("colorMode");
@@ -81,3 +93,44 @@ function setColors(color) {
         r.style.setProperty("--color5", "#e76f51");
     }
 }
+
+
+// type it out
+function typeItOut(){
+    // get txt 
+    let txt_container = $('.type-it-out')
+    txtList = txt_container.text().split(',')
+
+    txt_container = txt_container.text("")
+
+    var listCount = 0
+    var i = 0
+    setInterval(async() => {
+        let word = txtList[listCount]
+        let letter = word[i]
+        
+        let newText = txt_container.text() + letter
+        txt_container.text(newText)
+        
+        i++
+        if (i > word.length){
+            if (listCount === txtList.length - 1){
+                listCount = 0
+            } else {
+                listCount++
+            }
+            console.log('end of word');
+            sleep(1000)
+            txt_container.text('')
+            i=0
+        }
+    }, 100)
+}
+
+function sleep(milliseconds) {
+    const date = Date.now();
+    let currentDate = null;
+    do {
+      currentDate = Date.now();
+    } while (currentDate - date < milliseconds);
+  }
