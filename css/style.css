@@ -41,9 +41,13 @@ button, .button, .btn {
 .name-area {
     text-align: center;
     width: 20em;
-    /* height: 155px; */
+    min-height: 210px;
     border: 2px solid var(--color3);
     border-radius: 10px;
+}
+
+.name-area h2 {
+    height: 100px;
 }
 
 .splashScreen {
