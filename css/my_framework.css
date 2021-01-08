@@ -434,6 +434,12 @@ button:hover {
     border: 5px solid black;
 }
 
+/* a tags */
+.a-tag-none {
+    color: black;
+    text-decoration: none;
+}
+
 /* navbar */
 .my-navMenu{
     margin: 1em 0;

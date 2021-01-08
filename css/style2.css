@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&family=Staatliches&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --color1: #264653;
+    --color2: #2a9d8f;
+    --color3: #e9c46a;
+    --color4: #f4a261;
+    --color5: #e76f51;
+
+    --font1: 'Roboto Slab', serif;;
+    --font2: 'Staatliches', cursive;;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: var(--font2);
+    color: black;
+}
+
+p{
+    font-family: var(--font1);
+    color: black;
+}
+
+.my-container {
+    padding: 0;
+}
+
+.title {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.onTop {
+    z-index: 2;
+}
+
+.name-area {
+    text-align: center;
+    width: 20em;
+    height: 130px;
+    border: 2px solid var(--color3);
+    border-radius: 10px;
+}
+
+.bgImg-1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/code-wallpaper-10.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    filter: grayscale(70%);
+    z-index: 0;
+}
