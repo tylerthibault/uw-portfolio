@@ -435,7 +435,7 @@ button:hover {
 }
 
 /* a tags */
-.a-tag-none {
+.my-no-aTag {
     color: black;
     text-decoration: none;
 }

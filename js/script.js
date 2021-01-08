@@ -1,12 +1,4 @@
 $(document).ready(function () {
-    // type it out
-    $(".name-area").on("click", function(){
-        $('.splashScreen').css('display', 'none')
-        $('.main-content').css('display', 'block')
-    })
-
-    typeItOut()
-
     $('.main-content').on("click", () => {
         console.log('click');
         let sideMenu = $('.side-menu').data('status')
@@ -97,38 +89,7 @@ function setColors(color) {
     }
 }
 
-
-// type it out
-function typeItOut(){
-    // get txt 
-    let txt_container = $('.type-it-out')
-    txtList = txt_container.text().split(',')
-
-    txt_container = txt_container.text("")
-
-    var listCount = 0
-    var i = 0
-    setInterval(async() => {
-        let word = txtList[listCount]
-        let letter = word[i]
-        
-        let newText = txt_container.text() + letter
-        txt_container.text(newText)
-        
-        i++
-        if (i > word.length){
-            if (listCount === txtList.length - 1){
-                listCount = 0
-            } else {
-                listCount++
-            }
-            sleep(1000)
-            txt_container.text('')
-            i=0
-        }
-    }, 150)
-}
-
+// Sleep timer
 function sleep(milliseconds) {
     const date = Date.now();
     let currentDate = null;
