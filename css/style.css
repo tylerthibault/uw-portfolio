@@ -166,6 +166,11 @@ button, .button, .btn {
     animation-fill-mode: forwards;
 }
 
+.corban-img {
+    object-fit: contain;
+    background: white;
+}
+
 @keyframes side-menu-open {
     0% {left: -200px}
     100% {left: 0px}

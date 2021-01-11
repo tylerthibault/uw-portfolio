@@ -452,6 +452,23 @@ button:hover {
 }
 
 
+/*
+.projects {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .box {
+    width: 100%;
+    background-color: gray;
+  }
+  
+  @media (min-width: 750px) {
+    .projects {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  } 
+  */
 
 
 @media (min-width: 320px){
