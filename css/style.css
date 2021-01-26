@@ -66,6 +66,8 @@ button, .button, .btn {
 }
 
 .bgImg-1 {
+    margin: 0;
+    padding: 0;
     position: absolute;
     top: 0;
     left: 0;
@@ -142,6 +144,10 @@ button, .button, .btn {
     position: relative;
 }
 
+.my-container {
+    padding: 0;
+}
+
 .side-menu-container{
     position: fixed;
     top: 0;
@@ -169,6 +175,22 @@ button, .button, .btn {
 .corban-img {
     object-fit: contain;
     background: white;
+}
+
+.disclaimer{
+    padding: 10px;
+    position: fixed;
+    bottom: 30px;
+    width: 60%;
+    border-radius: 10px;
+    border: 2px solid var(--color3);
+    text-align: center;
+    background: var(--color5);
+}
+
+.disclaimer p {
+    margin: 0;
+    padding: 0;
 }
 
 @keyframes side-menu-open {
