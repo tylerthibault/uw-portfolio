@@ -145,6 +145,15 @@ button, .button, .btn {
     position: relative;
 }
 
+.slideshow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    width: 1000px;
+    height: 600px;
+}
+
 /* .my-container {
     padding: 0;
 } */
